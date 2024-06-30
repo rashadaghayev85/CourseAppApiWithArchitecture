@@ -26,7 +26,8 @@ namespace Service.Helpers
             //    src.GroupStudents.Select(gs => gs.Group.Name)));
             CreateMap<StudentCreateDto, Student>().ForMember(dest => dest.GroupStudents, opt => opt.MapFrom(src =>
         src.GroupId.Select(id => new GroupStudent { GroupId = id })));
-            CreateMap<StudentEditDto, Student>();
+            CreateMap<StudentEditDto, Student>().ForMember(dest => dest.GroupStudents, opt => opt.MapFrom(src =>
+        src.GroupId.Select(id => new GroupStudent { GroupId = id })));
 
 
             CreateMap<Group, GroupDto>().ReverseMap();
@@ -46,7 +47,8 @@ namespace Service.Helpers
                 src.GroupTeachers.Select(gs => gs.Group))); ;
             CreateMap<TeacherCreateDto, Teacher>().ForMember(dest => dest.GroupTeachers, opt => opt.MapFrom(src =>
         src.GroupId.Select(id => new GroupTeacher { GroupId = id }))); ;
-            CreateMap<TeacherEditDto, Teacher>();
+            CreateMap<TeacherEditDto, Teacher>().ForMember(dest => dest.GroupTeachers, opt => opt.MapFrom(src =>
+        src.GroupId.Select(id => new GroupTeacher { GroupId = id }))); ;
         }
 
     }

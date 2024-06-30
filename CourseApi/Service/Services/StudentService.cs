@@ -23,12 +23,14 @@ namespace Service.Services
         private readonly IStudentRepository _studentRepo;
         private readonly IMapper _mapper;
         private readonly ILogger<StudentService> _logger;
+        private readonly AppDbContext _context;
         
 
         public StudentService(IMapper mapper,
                            IGroupRepository groupRepo,
                            IStudentRepository studentRepo,
-                           ILogger<StudentService> logger)
+                           ILogger<StudentService> logger,
+                           AppDbContext context)
 
         {
 
@@ -36,6 +38,7 @@ namespace Service.Services
             _groupRepo = groupRepo;
             _studentRepo = studentRepo;
             _logger = logger;
+            _context = context;
            
         }
         public async Task CreateAsync(StudentCreateDto model)
@@ -82,8 +85,13 @@ namespace Service.Services
             if (model == null) throw new ArgumentNullException();
             var data = await _studentRepo.GetByIdWithAsync(id);
 
-            if (data is null) throw new ArgumentNullException();
+            if (data is null) throw new NotFoundException("Student not found");
 
+            _context.GroupStudents.RemoveRange(data.GroupStudents);
+            foreach (var groupId in model.GroupId)
+            {
+                data.GroupStudents.Add(new GroupStudent { StudentId = data.Id, GroupId = groupId });
+            }
             var editData = _mapper.Map(model, data);
             await _studentRepo.EditAsync(editData);
         }

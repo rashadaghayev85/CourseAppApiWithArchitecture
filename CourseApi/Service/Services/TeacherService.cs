@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Repository.Data;
 using Repository.Repositories.Interfaces;
 using Service.DTOs.Educations;
 using Service.DTOs.Students;
@@ -21,11 +23,13 @@ namespace Service.Services
         private readonly ITeacherRepository _teacherRepo;
         private readonly IMapper _mapper;
         private readonly ILogger<TeacherService> _logger;
+        private readonly AppDbContext _context;
 
         public TeacherService(IMapper mapper,
                            IGroupRepository groupRepo,
                            ITeacherRepository teacherRepo,
-                           ILogger<TeacherService> logger)
+                           ILogger<TeacherService> logger,
+                           AppDbContext context)
 
         {
 
@@ -33,6 +37,7 @@ namespace Service.Services
             _groupRepo = groupRepo;
             _logger = logger;
             _teacherRepo = teacherRepo;
+            _context=context;
         }
 
         public async Task CreateAsync(TeacherCreateDto model)
@@ -60,6 +65,12 @@ namespace Service.Services
             var data = await _teacherRepo.GetByIdWithAsync(id);
 
             if (data is null) throw new ArgumentNullException();
+
+            _context.GroupTeachers.RemoveRange(data.GroupTeachers);
+            foreach (var groupId in model.GroupId)
+            {
+                data.GroupTeachers.Add(new GroupTeacher { TeacherId = data.Id, GroupId = groupId });
+            }
 
             var editData = _mapper.Map(model, data);
             await _teacherRepo.EditAsync(editData);

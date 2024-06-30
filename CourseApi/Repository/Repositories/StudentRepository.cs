@@ -56,7 +56,7 @@ namespace Repository.Repositories
         public async Task<Student> GetByIdWithAsync( int? id)
         {
             if (id == null) { throw new ArgumentNullException(nameof(id)); }
-            var data = await _context.Students.AsNoTracking().Include(m=>m.GroupStudents).FirstOrDefaultAsync(m => m.Id==id);  
+            var data = await _context.Students.AsNoTracking().Include(m=>m.GroupStudents).ThenInclude(m=>m.Group).FirstOrDefaultAsync(m => m.Id==id);  
             return data;
         }
 
