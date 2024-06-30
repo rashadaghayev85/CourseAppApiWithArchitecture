@@ -1,0 +1,1235 @@
+2024-06-29 17:58:33.281 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 17:58:33.312 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 17:58:33.312 +04:00  INF  Hosting environment: Development
+2024-06-29 17:58:33.312 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 18:00:17.544 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 18:00:17.570 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 18:00:17.571 +04:00  INF  Hosting environment: Development
+2024-06-29 18:00:17.618 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 18:00:27.439 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 18:00:27.476 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 18:00:27.476 +04:00  INF  Hosting environment: Development
+2024-06-29 18:00:27.476 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 18:00:27.685 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 18:00:28.203 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 519.4583ms
+2024-06-29 18:00:28.217 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 18:00:28.267 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 18:00:28.277 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 9.9403ms
+2024-06-29 18:00:28.298 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 81.6110ms
+2024-06-29 18:00:28.348 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 18:00:28.465 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 116.3220ms
+2024-06-29 18:00:28.501 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 18:00:28.502 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.4746ms
+2024-06-29 18:00:37.358 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Student/GetAll - -
+2024-06-29 18:00:37.363 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 18:00:37.367 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.StudentController.GetAll (CourseApi)'
+2024-06-29 18:00:37.380 +04:00  INF  Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.StudentController (CourseApi).
+2024-06-29 18:00:38.791 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 18:00:38.793 +04:00  INF  Get All method is working
+2024-06-29 18:00:40.345 +04:00  INF  Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Address], [s].[Age], [s].[CreatedDate], [s].[Email], [s].[Name], [s].[SoftDelete], [s].[SurName], [t].[Id], [t].[GroupId], [t].[StudentId], [t].[Id0], [t].[Capacity], [t].[CreatedDate], [t].[EducationId], [t].[Name], [t].[RoomId], [t].[SoftDelete], [t].[StudentCount], [t].[TeacherId]
+FROM [Students] AS [s]
+LEFT JOIN (
+    SELECT [g].[Id], [g].[GroupId], [g].[StudentId], [g0].[Id] AS [Id0], [g0].[Capacity], [g0].[CreatedDate], [g0].[EducationId], [g0].[Name], [g0].[RoomId], [g0].[SoftDelete], [g0].[StudentCount], [g0].[TeacherId]
+    FROM [GroupStudents] AS [g]
+    INNER JOIN [Groups] AS [g0] ON [g].[GroupId] = [g0].[Id]
+) AS [t] ON [s].[Id] = [t].[StudentId]
+ORDER BY [s].[Id], [t].[Id]
+2024-06-29 18:00:40.403 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Students.StudentDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-29 18:00:40.409 +04:00  INF  Executed action CourseApi.Controllers.Admin.StudentController.GetAll (CourseApi) in 3025.2494ms
+2024-06-29 18:00:40.409 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.StudentController.GetAll (CourseApi)'
+2024-06-29 18:00:40.412 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Student/GetAll - - - 200 - application/json;+charset=utf-8 3054.5337ms
+2024-06-29 18:17:10.982 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 18:17:11.003 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 18:17:11.003 +04:00  INF  Hosting environment: Development
+2024-06-29 18:17:11.004 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 18:17:11.159 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 18:17:11.306 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 149.5521ms
+2024-06-29 18:17:11.324 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 18:17:11.325 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 18:17:11.325 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.5805ms
+2024-06-29 18:17:11.360 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 34.9411ms
+2024-06-29 18:17:11.720 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 18:17:11.797 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 18:17:11.799 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.5486ms
+2024-06-29 18:17:11.804 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 83.6757ms
+2024-06-29 20:59:55.111 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:00:02.854 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:00:03.143 +04:00  INF  Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-06-29 21:00:03.213 +04:00  INF  Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-06-29 21:00:03.216 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-06-29 21:00:03.217 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-06-29 21:00:03.240 +04:00  INF  Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-06-29 21:00:03.252 +04:00  INF  Applying migration '20240629165955_CreatedTables'.
+2024-06-29 21:00:03.322 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Educations] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [GroupId] int NOT NULL,
+    [SoftDelete] bit NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Educations] PRIMARY KEY ([Id])
+);
+2024-06-29 21:00:03.325 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Rooms] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [SeatCount] int NOT NULL,
+    [GroupId] int NOT NULL,
+    [SoftDelete] bit NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Rooms] PRIMARY KEY ([Id])
+);
+2024-06-29 21:00:03.328 +04:00  INF  Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Students] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [SurName] nvarchar(max) NOT NULL,
+    [Address] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Age] int NOT NULL,
+    [SoftDelete] bit NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Students] PRIMARY KEY ([Id])
+);
+2024-06-29 21:00:03.330 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Teachers] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Surname] nvarchar(max) NOT NULL,
+    [Salary] int NOT NULL,
+    [Age] int NOT NULL,
+    [SoftDelete] bit NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Teachers] PRIMARY KEY ([Id])
+);
+2024-06-29 21:00:03.334 +04:00  INF  Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Groups] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Capacity] int NOT NULL,
+    [EducationId] int NOT NULL,
+    [RoomId] int NOT NULL,
+    [SoftDelete] bit NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Groups] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Groups_Educations_EducationId] FOREIGN KEY ([EducationId]) REFERENCES [Educations] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Groups_Rooms_RoomId] FOREIGN KEY ([RoomId]) REFERENCES [Rooms] ([Id]) ON DELETE CASCADE
+);
+2024-06-29 21:00:03.336 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [GroupStudents] (
+    [Id] int NOT NULL IDENTITY,
+    [StudentId] int NOT NULL,
+    [GroupId] int NOT NULL,
+    CONSTRAINT [PK_GroupStudents] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_GroupStudents_Groups_GroupId] FOREIGN KEY ([GroupId]) REFERENCES [Groups] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_GroupStudents_Students_StudentId] FOREIGN KEY ([StudentId]) REFERENCES [Students] ([Id]) ON DELETE CASCADE
+);
+2024-06-29 21:00:03.340 +04:00  INF  Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [GroupTeachers] (
+    [Id] int NOT NULL IDENTITY,
+    [TeacherId] int NOT NULL,
+    [GroupId] int NOT NULL,
+    CONSTRAINT [PK_GroupTeachers] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_GroupTeachers_Groups_GroupId] FOREIGN KEY ([GroupId]) REFERENCES [Groups] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_GroupTeachers_Teachers_TeacherId] FOREIGN KEY ([TeacherId]) REFERENCES [Teachers] ([Id]) ON DELETE CASCADE
+);
+2024-06-29 21:00:03.342 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Groups_EducationId] ON [Groups] ([EducationId]);
+2024-06-29 21:00:03.342 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Groups_RoomId] ON [Groups] ([RoomId]);
+2024-06-29 21:00:03.344 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_GroupStudents_GroupId] ON [GroupStudents] ([GroupId]);
+2024-06-29 21:00:03.345 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_GroupStudents_StudentId] ON [GroupStudents] ([StudentId]);
+2024-06-29 21:00:03.346 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_GroupTeachers_GroupId] ON [GroupTeachers] ([GroupId]);
+2024-06-29 21:00:03.347 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_GroupTeachers_TeacherId] ON [GroupTeachers] ([TeacherId]);
+2024-06-29 21:00:03.349 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240629165955_CreatedTables', N'6.0.31');
+2024-06-29 21:05:10.883 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:05:17.497 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:05:17.794 +04:00  INF  Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-06-29 21:05:17.827 +04:00  INF  Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-06-29 21:05:17.830 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-06-29 21:05:17.831 +04:00  INF  Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-06-29 21:05:17.846 +04:00  INF  Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-06-29 21:05:17.861 +04:00  INF  Applying migration '20240629170511_CreatedTables'.
+2024-06-29 21:05:17.952 +04:00  INF  Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Educations] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [GroupId] int NOT NULL,
+    [SoftDelete] bit NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Educations] PRIMARY KEY ([Id])
+);
+2024-06-29 21:05:17.959 +04:00  INF  Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Rooms] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [SeatCount] int NOT NULL,
+    [GroupId] int NOT NULL,
+    [SoftDelete] bit NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Rooms] PRIMARY KEY ([Id])
+);
+2024-06-29 21:05:17.961 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Students] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [SurName] nvarchar(max) NOT NULL,
+    [Address] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Age] int NOT NULL,
+    [SoftDelete] bit NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Students] PRIMARY KEY ([Id])
+);
+2024-06-29 21:05:17.962 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Teachers] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Surname] nvarchar(max) NOT NULL,
+    [Salary] int NOT NULL,
+    [Age] int NOT NULL,
+    [SoftDelete] bit NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Teachers] PRIMARY KEY ([Id])
+);
+2024-06-29 21:05:17.973 +04:00  INF  Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Groups] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Capacity] int NOT NULL,
+    [EducationId] int NOT NULL,
+    [RoomId] int NOT NULL,
+    [SoftDelete] bit NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Groups] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Groups_Educations_EducationId] FOREIGN KEY ([EducationId]) REFERENCES [Educations] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Groups_Rooms_RoomId] FOREIGN KEY ([RoomId]) REFERENCES [Rooms] ([Id]) ON DELETE CASCADE
+);
+2024-06-29 21:05:17.980 +04:00  INF  Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [GroupStudents] (
+    [Id] int NOT NULL IDENTITY,
+    [StudentId] int NOT NULL,
+    [GroupId] int NOT NULL,
+    CONSTRAINT [PK_GroupStudents] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_GroupStudents_Groups_GroupId] FOREIGN KEY ([GroupId]) REFERENCES [Groups] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_GroupStudents_Students_StudentId] FOREIGN KEY ([StudentId]) REFERENCES [Students] ([Id]) ON DELETE CASCADE
+);
+2024-06-29 21:05:17.988 +04:00  INF  Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [GroupTeachers] (
+    [Id] int NOT NULL IDENTITY,
+    [TeacherId] int NOT NULL,
+    [GroupId] int NOT NULL,
+    CONSTRAINT [PK_GroupTeachers] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_GroupTeachers_Groups_GroupId] FOREIGN KEY ([GroupId]) REFERENCES [Groups] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_GroupTeachers_Teachers_TeacherId] FOREIGN KEY ([TeacherId]) REFERENCES [Teachers] ([Id]) ON DELETE CASCADE
+);
+2024-06-29 21:05:17.989 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Groups_EducationId] ON [Groups] ([EducationId]);
+2024-06-29 21:05:17.994 +04:00  INF  Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Groups_RoomId] ON [Groups] ([RoomId]);
+2024-06-29 21:05:17.998 +04:00  INF  Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_GroupStudents_GroupId] ON [GroupStudents] ([GroupId]);
+2024-06-29 21:05:18.004 +04:00  INF  Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_GroupStudents_StudentId] ON [GroupStudents] ([StudentId]);
+2024-06-29 21:05:18.006 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_GroupTeachers_GroupId] ON [GroupTeachers] ([GroupId]);
+2024-06-29 21:05:18.010 +04:00  INF  Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_GroupTeachers_TeacherId] ON [GroupTeachers] ([TeacherId]);
+2024-06-29 21:05:18.013 +04:00  INF  Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240629170511_CreatedTables', N'6.0.31');
+2024-06-29 21:33:21.753 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 21:33:21.779 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 21:33:21.779 +04:00  INF  Hosting environment: Development
+2024-06-29 21:33:21.779 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 21:33:21.961 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 21:33:22.159 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 200.1395ms
+2024-06-29 21:33:22.193 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 21:33:22.194 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 21:33:22.196 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.8379ms
+2024-06-29 21:33:22.231 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.1240ms
+2024-06-29 21:33:22.645 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 21:33:22.725 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 21:33:22.726 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.2247ms
+2024-06-29 21:33:22.741 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 96.4732ms
+2024-06-29 21:33:35.947 +04:00  INF  Request starting HTTP/1.1 POST http://localhost:5114/api/admin/Education/Create application/json 27
+2024-06-29 21:33:35.955 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 21:33:35.960 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.EducationController.Create (CourseApi)'
+2024-06-29 21:33:35.985 +04:00  INF  Route matched with {action = "Create", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Service.DTOs.Educations.EducationCreateDto) on controller CourseApi.Controllers.Admin.EducationController (CourseApi).
+2024-06-29 21:33:36.769 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:33:37.477 +04:00  INF  Executed DbCommand (94ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Educations] ([CreatedDate], [GroupId], [Name], [SoftDelete])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Educations]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-29 21:33:37.530 +04:00  INF  Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-29 21:33:37.547 +04:00  INF  Executed action CourseApi.Controllers.Admin.EducationController.Create (CourseApi) in 1558.2197ms
+2024-06-29 21:33:37.548 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.EducationController.Create (CourseApi)'
+2024-06-29 21:33:37.552 +04:00  INF  Request finished HTTP/1.1 POST http://localhost:5114/api/admin/Education/Create application/json 27 - 201 - application/json;+charset=utf-8 1604.8802ms
+2024-06-29 21:33:44.692 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Education/GetAll - -
+2024-06-29 21:33:44.695 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.EducationController.GetAll (CourseApi)'
+2024-06-29 21:33:44.698 +04:00  INF  Route matched with {action = "GetAll", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.EducationController (CourseApi).
+2024-06-29 21:33:44.732 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:33:44.733 +04:00  INF  Get All method is working
+2024-06-29 21:33:44.897 +04:00  INF  Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[GroupId], [e].[Name], [e].[SoftDelete]
+FROM [Educations] AS [e]
+2024-06-29 21:33:44.911 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Educations.EducationDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-29 21:33:44.913 +04:00  INF  Executed action CourseApi.Controllers.Admin.EducationController.GetAll (CourseApi) in 214.4793ms
+2024-06-29 21:33:44.913 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.EducationController.GetAll (CourseApi)'
+2024-06-29 21:33:44.913 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Education/GetAll - - - 200 - application/json;+charset=utf-8 220.9296ms
+2024-06-29 21:33:52.642 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Education/GetById/1 - -
+2024-06-29 21:33:52.642 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.EducationController.GetById (CourseApi)'
+2024-06-29 21:33:52.645 +04:00  INF  Route matched with {action = "GetById", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller CourseApi.Controllers.Admin.EducationController (CourseApi).
+2024-06-29 21:33:52.655 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:33:52.763 +04:00  INF  Executed DbCommand (53ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[CreatedDate], [e].[GroupId], [e].[Name], [e].[SoftDelete]
+FROM [Educations] AS [e]
+WHERE [e].[Id] = @__id_0
+2024-06-29 21:33:52.764 +04:00  INF  Executing OkObjectResult, writing value of type 'Service.DTOs.Educations.EducationDto'.
+2024-06-29 21:33:52.765 +04:00  INF  Executed action CourseApi.Controllers.Admin.EducationController.GetById (CourseApi) in 119.6816ms
+2024-06-29 21:33:52.765 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.EducationController.GetById (CourseApi)'
+2024-06-29 21:33:52.765 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Education/GetById/1 - - - 200 - application/json;+charset=utf-8 123.2873ms
+2024-06-29 21:34:07.533 +04:00  INF  Request starting HTTP/1.1 PUT http://localhost:5114/api/admin/Education/Edit/1 application/json 22
+2024-06-29 21:34:07.533 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.EducationController.Edit (CourseApi)'
+2024-06-29 21:34:07.536 +04:00  INF  Route matched with {action = "Edit", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(Int32, Service.DTOs.Educations.EducationEditDto) on controller CourseApi.Controllers.Admin.EducationController (CourseApi).
+2024-06-29 21:34:07.536 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:34:07.539 +04:00  INF  Executed action CourseApi.Controllers.Admin.EducationController.Edit (CourseApi) in 3.8153ms
+2024-06-29 21:34:07.540 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.EducationController.Edit (CourseApi)'
+2024-06-29 21:34:07.541 +04:00  ERR  The method or operation is not implemented.
+2024-06-29 21:34:07.542 +04:00  INF  Request finished HTTP/1.1 PUT http://localhost:5114/api/admin/Education/Edit/1 application/json 22 - 500 - application/json 9.1363ms
+2024-06-29 21:34:08.935 +04:00  INF  Request starting HTTP/1.1 PUT http://localhost:5114/api/admin/Education/Edit/1 application/json 22
+2024-06-29 21:34:08.935 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.EducationController.Edit (CourseApi)'
+2024-06-29 21:34:08.935 +04:00  INF  Route matched with {action = "Edit", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(Int32, Service.DTOs.Educations.EducationEditDto) on controller CourseApi.Controllers.Admin.EducationController (CourseApi).
+2024-06-29 21:34:08.936 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:34:08.937 +04:00  INF  Executed action CourseApi.Controllers.Admin.EducationController.Edit (CourseApi) in 1.4198ms
+2024-06-29 21:34:08.937 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.EducationController.Edit (CourseApi)'
+2024-06-29 21:34:08.937 +04:00  ERR  The method or operation is not implemented.
+2024-06-29 21:34:08.937 +04:00  INF  Request finished HTTP/1.1 PUT http://localhost:5114/api/admin/Education/Edit/1 application/json 22 - 500 - application/json 2.2784ms
+2024-06-29 21:35:38.216 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 21:35:38.244 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 21:35:38.244 +04:00  INF  Hosting environment: Development
+2024-06-29 21:35:38.244 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 21:35:38.672 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 21:35:38.832 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 163.2308ms
+2024-06-29 21:35:38.949 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 21:35:38.951 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 21:35:38.952 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.4102ms
+2024-06-29 21:35:38.959 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 21:35:38.960 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 0.9405ms
+2024-06-29 21:35:38.981 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 32.0987ms
+2024-06-29 21:35:39.034 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 21:35:39.126 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 92.0280ms
+2024-06-29 21:35:51.297 +04:00  INF  Request starting HTTP/1.1 PUT http://localhost:5114/api/admin/Education/Edit/1 application/json 22
+2024-06-29 21:35:51.311 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 21:35:51.322 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.EducationController.Edit (CourseApi)'
+2024-06-29 21:35:51.395 +04:00  INF  Route matched with {action = "Edit", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(Int32, Service.DTOs.Educations.EducationEditDto) on controller CourseApi.Controllers.Admin.EducationController (CourseApi).
+2024-06-29 21:35:53.626 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:35:55.085 +04:00  INF  Executed DbCommand (113ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[CreatedDate], [e].[GroupId], [e].[Name], [e].[SoftDelete]
+FROM [Educations] AS [e]
+WHERE [e].[Id] = @__id_0
+2024-06-29 21:35:55.520 +04:00  INF  Executed DbCommand (9ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Educations] SET [CreatedDate] = @p0, [GroupId] = @p1, [Name] = @p2, [SoftDelete] = @p3
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+2024-06-29 21:35:55.628 +04:00  INF  Executing StatusCodeResult, setting HTTP status code 200
+2024-06-29 21:35:55.644 +04:00  INF  Executed action CourseApi.Controllers.Admin.EducationController.Edit (CourseApi) in 4235.099ms
+2024-06-29 21:35:55.645 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.EducationController.Edit (CourseApi)'
+2024-06-29 21:35:55.657 +04:00  INF  Request finished HTTP/1.1 PUT http://localhost:5114/api/admin/Education/Edit/1 application/json 22 - 200 0 - 4360.9115ms
+2024-06-29 21:36:00.761 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Education/GetAll - -
+2024-06-29 21:36:00.765 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.EducationController.GetAll (CourseApi)'
+2024-06-29 21:36:00.768 +04:00  INF  Route matched with {action = "GetAll", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.EducationController (CourseApi).
+2024-06-29 21:36:00.863 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:36:00.865 +04:00  INF  Get All method is working
+2024-06-29 21:36:00.890 +04:00  INF  Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[GroupId], [e].[Name], [e].[SoftDelete]
+FROM [Educations] AS [e]
+2024-06-29 21:36:00.930 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Educations.EducationDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-29 21:36:00.934 +04:00  INF  Executed action CourseApi.Controllers.Admin.EducationController.GetAll (CourseApi) in 165.5771ms
+2024-06-29 21:36:00.934 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.EducationController.GetAll (CourseApi)'
+2024-06-29 21:36:00.934 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Education/GetAll - - - 200 - application/json;+charset=utf-8 173.1701ms
+2024-06-29 21:36:08.775 +04:00  INF  Request starting HTTP/1.1 DELETE http://localhost:5114/api/admin/Education/Delete?id=1 - -
+2024-06-29 21:36:08.775 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.EducationController.Delete (CourseApi)'
+2024-06-29 21:36:08.780 +04:00  INF  Route matched with {action = "Delete", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(System.Nullable`1[System.Int32]) on controller CourseApi.Controllers.Admin.EducationController (CourseApi).
+2024-06-29 21:36:08.806 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:36:08.836 +04:00  INF  Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[CreatedDate], [e].[GroupId], [e].[Name], [e].[SoftDelete]
+FROM [Educations] AS [e]
+WHERE [e].[Id] = @__id_0
+2024-06-29 21:36:08.885 +04:00  INF  Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Educations]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2024-06-29 21:36:08.900 +04:00  INF  Executing StatusCodeResult, setting HTTP status code 200
+2024-06-29 21:36:08.900 +04:00  INF  Executed action CourseApi.Controllers.Admin.EducationController.Delete (CourseApi) in 120.0268ms
+2024-06-29 21:36:08.901 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.EducationController.Delete (CourseApi)'
+2024-06-29 21:36:08.901 +04:00  INF  Request finished HTTP/1.1 DELETE http://localhost:5114/api/admin/Education/Delete?id=1 - - - 200 0 - 126.1678ms
+2024-06-29 21:36:14.667 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Education/GetAll - -
+2024-06-29 21:36:14.668 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.EducationController.GetAll (CourseApi)'
+2024-06-29 21:36:14.668 +04:00  INF  Route matched with {action = "GetAll", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.EducationController (CourseApi).
+2024-06-29 21:36:14.669 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:36:14.669 +04:00  INF  Get All method is working
+2024-06-29 21:36:14.672 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[GroupId], [e].[Name], [e].[SoftDelete]
+FROM [Educations] AS [e]
+2024-06-29 21:36:14.673 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Educations.EducationDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-29 21:36:14.673 +04:00  INF  Executed action CourseApi.Controllers.Admin.EducationController.GetAll (CourseApi) in 5.4288ms
+2024-06-29 21:36:14.674 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.EducationController.GetAll (CourseApi)'
+2024-06-29 21:36:14.674 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Education/GetAll - - - 200 - application/json;+charset=utf-8 6.7179ms
+2024-06-29 21:42:33.619 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 21:42:33.643 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 21:42:33.643 +04:00  INF  Hosting environment: Development
+2024-06-29 21:42:33.643 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 21:42:34.130 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 21:42:34.329 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 201.8947ms
+2024-06-29 21:42:34.334 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 21:42:34.338 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 21:42:34.339 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.8159ms
+2024-06-29 21:42:34.373 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.0350ms
+2024-06-29 21:42:34.505 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 21:42:34.607 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 21:42:34.608 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.4374ms
+2024-06-29 21:42:34.616 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 110.9285ms
+2024-06-29 21:43:01.825 +04:00  INF  Request starting HTTP/1.1 POST http://localhost:5114/api/admin/Room/Create application/json 38
+2024-06-29 21:43:01.836 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 21:43:01.846 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.Create (CourseApi)'
+2024-06-29 21:43:01.902 +04:00  INF  Route matched with {action = "Create", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Service.DTOs.Room.RoomCreateDto) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 21:43:03.996 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:43:05.310 +04:00  INF  Executed DbCommand (128ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Rooms] ([CreatedDate], [GroupId], [Name], [SeatCount], [SoftDelete])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Rooms]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-29 21:43:05.530 +04:00  INF  Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-29 21:43:05.585 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.Create (CourseApi) in 3668.0759ms
+2024-06-29 21:43:05.587 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.Create (CourseApi)'
+2024-06-29 21:43:05.597 +04:00  INF  Request finished HTTP/1.1 POST http://localhost:5114/api/admin/Room/Create application/json 38 - 201 - application/json;+charset=utf-8 3772.4984ms
+2024-06-29 21:43:18.120 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Room/GetAll - -
+2024-06-29 21:43:18.126 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.GetAll (CourseApi)'
+2024-06-29 21:43:18.133 +04:00  INF  Route matched with {action = "GetAll", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 21:43:18.236 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:43:18.238 +04:00  INF  Get All method is working
+2024-06-29 21:43:18.723 +04:00  INF  Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[CreatedDate], [r].[GroupId], [r].[Name], [r].[SeatCount], [r].[SoftDelete]
+FROM [Rooms] AS [r]
+2024-06-29 21:43:18.774 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Room.RoomDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-29 21:43:18.777 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.GetAll (CourseApi) in 644.2927ms
+2024-06-29 21:43:18.777 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.GetAll (CourseApi)'
+2024-06-29 21:43:18.778 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Room/GetAll - - - 200 - application/json;+charset=utf-8 658.1170ms
+2024-06-29 21:43:27.185 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Room/GetById/1 - -
+2024-06-29 21:43:27.185 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.GetById (CourseApi)'
+2024-06-29 21:43:27.192 +04:00  INF  Route matched with {action = "GetById", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 21:43:27.224 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:43:27.448 +04:00  INF  Executed DbCommand (51ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CreatedDate], [r].[GroupId], [r].[Name], [r].[SeatCount], [r].[SoftDelete]
+FROM [Rooms] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-06-29 21:43:27.453 +04:00  INF  Executing OkObjectResult, writing value of type 'Service.DTOs.Room.RoomDto'.
+2024-06-29 21:43:27.453 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.GetById (CourseApi) in 260.7258ms
+2024-06-29 21:43:27.453 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.GetById (CourseApi)'
+2024-06-29 21:43:27.453 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Room/GetById/1 - - - 200 - application/json;+charset=utf-8 268.6920ms
+2024-06-29 21:43:45.157 +04:00  INF  Request starting HTTP/1.1 PUT http://localhost:5114/api/admin/Room/Edit/1 application/json 40
+2024-06-29 21:43:45.158 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.Edit (CourseApi)'
+2024-06-29 21:43:45.165 +04:00  INF  Route matched with {action = "Edit", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(Int32, Service.DTOs.Room.RoomEditDto) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 21:43:45.167 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:43:45.188 +04:00  INF  Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CreatedDate], [r].[GroupId], [r].[Name], [r].[SeatCount], [r].[SoftDelete]
+FROM [Rooms] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-06-29 21:43:45.214 +04:00  INF  Executed DbCommand (7ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Rooms] SET [CreatedDate] = @p0, [GroupId] = @p1, [Name] = @p2, [SeatCount] = @p3, [SoftDelete] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2024-06-29 21:43:45.281 +04:00  INF  Executing StatusCodeResult, setting HTTP status code 200
+2024-06-29 21:43:45.281 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.Edit (CourseApi) in 115.3842ms
+2024-06-29 21:43:45.281 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.Edit (CourseApi)'
+2024-06-29 21:43:45.281 +04:00  INF  Request finished HTTP/1.1 PUT http://localhost:5114/api/admin/Room/Edit/1 application/json 40 - 200 0 - 123.9345ms
+2024-06-29 21:43:50.033 +04:00  INF  Request starting HTTP/1.1 PUT http://localhost:5114/api/admin/Room/Edit/1 application/json 40
+2024-06-29 21:43:50.034 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.Edit (CourseApi)'
+2024-06-29 21:43:50.034 +04:00  INF  Route matched with {action = "Edit", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(Int32, Service.DTOs.Room.RoomEditDto) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 21:43:50.035 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:43:50.040 +04:00  INF  Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CreatedDate], [r].[GroupId], [r].[Name], [r].[SeatCount], [r].[SoftDelete]
+FROM [Rooms] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-06-29 21:43:50.047 +04:00  INF  Executed DbCommand (5ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Rooms] SET [CreatedDate] = @p0, [GroupId] = @p1, [Name] = @p2, [SeatCount] = @p3, [SoftDelete] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2024-06-29 21:43:50.096 +04:00  INF  Executing StatusCodeResult, setting HTTP status code 200
+2024-06-29 21:43:50.096 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.Edit (CourseApi) in 62.2705ms
+2024-06-29 21:43:50.096 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.Edit (CourseApi)'
+2024-06-29 21:43:50.097 +04:00  INF  Request finished HTTP/1.1 PUT http://localhost:5114/api/admin/Room/Edit/1 application/json 40 - 200 0 - 63.3359ms
+2024-06-29 21:44:12.185 +04:00  INF  Request starting HTTP/1.1 PUT http://localhost:5114/api/admin/Room/Edit/1 application/json 41
+2024-06-29 21:44:12.186 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.Edit (CourseApi)'
+2024-06-29 21:44:12.186 +04:00  INF  Route matched with {action = "Edit", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(Int32, Service.DTOs.Room.RoomEditDto) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 21:44:12.188 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:44:12.192 +04:00  INF  Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CreatedDate], [r].[GroupId], [r].[Name], [r].[SeatCount], [r].[SoftDelete]
+FROM [Rooms] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-06-29 21:44:12.197 +04:00  INF  Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Rooms] SET [CreatedDate] = @p0, [GroupId] = @p1, [Name] = @p2, [SeatCount] = @p3, [SoftDelete] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2024-06-29 21:44:12.246 +04:00  INF  Executing StatusCodeResult, setting HTTP status code 200
+2024-06-29 21:44:12.246 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.Edit (CourseApi) in 60.1523ms
+2024-06-29 21:44:12.246 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.Edit (CourseApi)'
+2024-06-29 21:44:12.247 +04:00  INF  Request finished HTTP/1.1 PUT http://localhost:5114/api/admin/Room/Edit/1 application/json 41 - 200 0 - 61.5452ms
+2024-06-29 21:44:20.382 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Room/GetAll - -
+2024-06-29 21:44:20.382 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.GetAll (CourseApi)'
+2024-06-29 21:44:20.382 +04:00  INF  Route matched with {action = "GetAll", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 21:44:20.383 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 21:44:20.383 +04:00  INF  Get All method is working
+2024-06-29 21:44:20.386 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[CreatedDate], [r].[GroupId], [r].[Name], [r].[SeatCount], [r].[SoftDelete]
+FROM [Rooms] AS [r]
+2024-06-29 21:44:20.387 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Room.RoomDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-29 21:44:20.387 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.GetAll (CourseApi) in 4.8186ms
+2024-06-29 21:44:20.387 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.GetAll (CourseApi)'
+2024-06-29 21:44:20.387 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Room/GetAll - - - 200 - application/json;+charset=utf-8 5.8381ms
+2024-06-29 22:11:02.991 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:11:03.021 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:11:03.021 +04:00  INF  Hosting environment: Development
+2024-06-29 22:11:03.021 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:11:03.209 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:11:03.441 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 235.8350ms
+2024-06-29 22:11:03.449 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:11:03.452 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 2.4647ms
+2024-06-29 22:11:03.458 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:11:03.492 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 34.0480ms
+2024-06-29 22:11:03.883 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:11:03.981 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:11:03.983 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.3430ms
+2024-06-29 22:11:04.003 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 120.1610ms
+2024-06-29 22:11:33.272 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Group/GetAll - -
+2024-06-29 22:11:33.278 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 22:11:33.282 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi)'
+2024-06-29 22:11:33.295 +04:00  INF  Route matched with {action = "GetAll", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.GroupController (CourseApi).
+2024-06-29 22:11:34.102 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:11:34.105 +04:00  INF  Get All method is working
+2024-06-29 22:11:34.736 +04:00  INF  Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete], [g0].[Id], [g0].[GroupId], [g0].[StudentId]
+FROM [Groups] AS [g]
+LEFT JOIN [GroupStudents] AS [g0] ON [g].[Id] = [g0].[GroupId]
+ORDER BY [g].[Id]
+2024-06-29 22:11:34.776 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-29 22:11:34.784 +04:00  INF  Executed action CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi) in 1484.0175ms
+2024-06-29 22:11:34.785 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi)'
+2024-06-29 22:11:34.789 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Group/GetAll - - - 200 - application/json;+charset=utf-8 1516.4901ms
+2024-06-29 22:11:54.544 +04:00  INF  Request starting HTTP/1.1 POST http://localhost:5114/api/admin/Group/Create application/json 36
+2024-06-29 22:11:54.547 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.GroupController.Create (CourseApi)'
+2024-06-29 22:11:54.560 +04:00  INF  Route matched with {action = "Create", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Service.DTOs.Groups.GroupCreateDto) on controller CourseApi.Controllers.Admin.GroupController (CourseApi).
+2024-06-29 22:11:54.600 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:11:54.848 +04:00  ERR  Failed executing DbCommand (76ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 100), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Groups] ([Capacity], [CreatedDate], [EducationId], [Name], [RoomId], [SoftDelete])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [Groups]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-29 22:11:55.006 +04:00  ERR  An exception occurred in the database while saving changes for context type 'Repository.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Groups_Educations_EducationId". The conflict occurred in database "APICourseDB", table "dbo.Educations", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:8d8cad94-ceed-4ffb-9efd-f64a8301d9e7
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Groups_Educations_EducationId". The conflict occurred in database "APICourseDB", table "dbo.Educations", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:8d8cad94-ceed-4ffb-9efd-f64a8301d9e7
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+
+2024-06-29 22:11:55.007 +04:00  INF  Executed action CourseApi.Controllers.Admin.GroupController.Create (CourseApi) in 447.599ms
+2024-06-29 22:11:55.008 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.GroupController.Create (CourseApi)'
+2024-06-29 22:11:55.008 +04:00  ERR  An error occurred while saving the entity changes. See the inner exception for details.
+2024-06-29 22:11:55.009 +04:00  INF  Request finished HTTP/1.1 POST http://localhost:5114/api/admin/Group/Create application/json 36 - 500 - application/json 464.6858ms
+2024-06-29 22:15:19.642 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:15:19.664 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:15:19.664 +04:00  INF  Hosting environment: Development
+2024-06-29 22:15:19.664 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:15:20.133 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:15:20.303 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 171.4689ms
+2024-06-29 22:15:20.313 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:15:20.315 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.7128ms
+2024-06-29 22:15:20.316 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:15:20.346 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.5265ms
+2024-06-29 22:15:20.703 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:15:20.704 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.0829ms
+2024-06-29 22:15:20.805 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:15:20.958 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 152.5031ms
+2024-06-29 22:15:27.682 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:15:27.709 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:15:27.710 +04:00  INF  Hosting environment: Development
+2024-06-29 22:15:27.710 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:15:27.889 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:15:28.040 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 153.1558ms
+2024-06-29 22:15:28.052 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:15:28.053 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:15:28.053 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.5232ms
+2024-06-29 22:15:28.086 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 32.4802ms
+2024-06-29 22:15:28.199 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:15:28.200 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 0.6511ms
+2024-06-29 22:15:28.271 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:15:28.383 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 112.7321ms
+2024-06-29 22:17:20.041 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Education/GetAll - -
+2024-06-29 22:17:20.050 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 22:17:20.061 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.EducationController.GetAll (CourseApi)'
+2024-06-29 22:17:20.101 +04:00  INF  Route matched with {action = "GetAll", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.EducationController (CourseApi).
+2024-06-29 22:17:22.440 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:17:22.445 +04:00  INF  Get All method is working
+2024-06-29 22:17:23.682 +04:00  INF  Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[GroupId], [e].[Name], [e].[SoftDelete]
+FROM [Educations] AS [e]
+2024-06-29 22:17:23.785 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Educations.EducationDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-29 22:17:23.800 +04:00  INF  Executed action CourseApi.Controllers.Admin.EducationController.GetAll (CourseApi) in 3686.6668ms
+2024-06-29 22:17:23.802 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.EducationController.GetAll (CourseApi)'
+2024-06-29 22:17:23.810 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Education/GetAll - - - 200 - application/json;+charset=utf-8 3768.7649ms
+2024-06-29 22:17:37.672 +04:00  INF  Request starting HTTP/1.1 POST http://localhost:5114/api/admin/Education/Create application/json 27
+2024-06-29 22:17:37.676 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.EducationController.Create (CourseApi)'
+2024-06-29 22:17:37.709 +04:00  INF  Route matched with {action = "Create", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Service.DTOs.Educations.EducationCreateDto) on controller CourseApi.Controllers.Admin.EducationController (CourseApi).
+2024-06-29 22:17:37.807 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:17:38.389 +04:00  INF  Executed DbCommand (105ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Educations] ([CreatedDate], [GroupId], [Name], [SoftDelete])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Educations]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-29 22:17:38.499 +04:00  INF  Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-29 22:17:38.538 +04:00  INF  Executed action CourseApi.Controllers.Admin.EducationController.Create (CourseApi) in 828.6893ms
+2024-06-29 22:17:38.538 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.EducationController.Create (CourseApi)'
+2024-06-29 22:17:38.539 +04:00  INF  Request finished HTTP/1.1 POST http://localhost:5114/api/admin/Education/Create application/json 27 - 201 - application/json;+charset=utf-8 866.8280ms
+2024-06-29 22:18:48.821 +04:00  INF  Request starting HTTP/1.1 POST http://localhost:5114/api/admin/Education/Create application/json 27
+2024-06-29 22:18:48.821 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.EducationController.Create (CourseApi)'
+2024-06-29 22:18:48.822 +04:00  INF  Route matched with {action = "Create", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Service.DTOs.Educations.EducationCreateDto) on controller CourseApi.Controllers.Admin.EducationController (CourseApi).
+2024-06-29 22:18:48.848 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:18:48.862 +04:00  INF  Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Educations] ([CreatedDate], [GroupId], [Name], [SoftDelete])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Educations]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-29 22:18:48.864 +04:00  INF  Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-29 22:18:48.865 +04:00  INF  Executed action CourseApi.Controllers.Admin.EducationController.Create (CourseApi) in 43.2535ms
+2024-06-29 22:18:48.865 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.EducationController.Create (CourseApi)'
+2024-06-29 22:18:48.866 +04:00  INF  Request finished HTTP/1.1 POST http://localhost:5114/api/admin/Education/Create application/json 27 - 201 - application/json;+charset=utf-8 45.1317ms
+2024-06-29 22:19:23.445 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Education/GetAll - -
+2024-06-29 22:19:23.445 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.EducationController.GetAll (CourseApi)'
+2024-06-29 22:19:23.445 +04:00  INF  Route matched with {action = "GetAll", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.EducationController (CourseApi).
+2024-06-29 22:19:23.446 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:19:23.446 +04:00  INF  Get All method is working
+2024-06-29 22:19:23.452 +04:00  INF  Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[GroupId], [e].[Name], [e].[SoftDelete]
+FROM [Educations] AS [e]
+2024-06-29 22:19:23.460 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Educations.EducationDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-29 22:19:23.462 +04:00  INF  Executed action CourseApi.Controllers.Admin.EducationController.GetAll (CourseApi) in 16.3891ms
+2024-06-29 22:19:23.462 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.EducationController.GetAll (CourseApi)'
+2024-06-29 22:19:23.462 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Education/GetAll - - - 200 - application/json;+charset=utf-8 17.6233ms
+2024-06-29 22:19:31.928 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Room/GetAll - -
+2024-06-29 22:19:31.929 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.GetAll (CourseApi)'
+2024-06-29 22:19:31.935 +04:00  INF  Route matched with {action = "GetAll", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 22:19:31.936 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:19:31.939 +04:00  INF  Get All method is working
+2024-06-29 22:19:32.001 +04:00  INF  Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[CreatedDate], [r].[GroupId], [r].[Name], [r].[SeatCount], [r].[SoftDelete]
+FROM [Rooms] AS [r]
+2024-06-29 22:19:32.009 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Room.RoomDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-29 22:19:32.011 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.GetAll (CourseApi) in 75.9427ms
+2024-06-29 22:19:32.011 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.GetAll (CourseApi)'
+2024-06-29 22:19:32.011 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Room/GetAll - - - 200 - application/json;+charset=utf-8 83.0093ms
+2024-06-29 22:19:46.350 +04:00  INF  Request starting HTTP/1.1 PUT http://localhost:5114/api/admin/Room/Edit/1 application/json 37
+2024-06-29 22:19:46.352 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.Edit (CourseApi)'
+2024-06-29 22:19:46.358 +04:00  INF  Route matched with {action = "Edit", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(Int32, Service.DTOs.Room.RoomEditDto) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 22:19:46.360 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:19:46.525 +04:00  INF  Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CreatedDate], [r].[GroupId], [r].[Name], [r].[SeatCount], [r].[SoftDelete]
+FROM [Rooms] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-06-29 22:19:46.623 +04:00  INF  Executed DbCommand (52ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Rooms] SET [CreatedDate] = @p0, [GroupId] = @p1, [Name] = @p2, [SeatCount] = @p3, [SoftDelete] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2024-06-29 22:19:46.643 +04:00  INF  Executing StatusCodeResult, setting HTTP status code 200
+2024-06-29 22:19:46.643 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.Edit (CourseApi) in 284.7106ms
+2024-06-29 22:19:46.644 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.Edit (CourseApi)'
+2024-06-29 22:19:46.644 +04:00  INF  Request finished HTTP/1.1 PUT http://localhost:5114/api/admin/Room/Edit/1 application/json 37 - 200 0 - 293.7715ms
+2024-06-29 22:20:32.201 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Group/GetAll - -
+2024-06-29 22:20:32.202 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi)'
+2024-06-29 22:20:32.207 +04:00  INF  Route matched with {action = "GetAll", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.GroupController (CourseApi).
+2024-06-29 22:20:32.209 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:20:32.213 +04:00  INF  Get All method is working
+2024-06-29 22:20:32.405 +04:00  INF  Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete], [g0].[Id], [g0].[GroupId], [g0].[StudentId]
+FROM [Groups] AS [g]
+LEFT JOIN [GroupStudents] AS [g0] ON [g].[Id] = [g0].[GroupId]
+ORDER BY [g].[Id]
+2024-06-29 22:20:32.418 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-29 22:20:32.425 +04:00  INF  Executed action CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi) in 217.5605ms
+2024-06-29 22:20:32.425 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi)'
+2024-06-29 22:20:32.426 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Group/GetAll - - - 200 - application/json;+charset=utf-8 224.3373ms
+2024-06-29 22:20:49.100 +04:00  INF  Request starting HTTP/1.1 POST http://localhost:5114/api/admin/Group/Create application/json 71
+2024-06-29 22:20:49.102 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.GroupController.Create (CourseApi)'
+2024-06-29 22:20:49.105 +04:00  INF  Route matched with {action = "Create", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Service.DTOs.Groups.GroupCreateDto) on controller CourseApi.Controllers.Admin.GroupController (CourseApi).
+2024-06-29 22:20:49.106 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:20:49.218 +04:00  INF  Executed DbCommand (54ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 100), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Groups] ([Capacity], [CreatedDate], [EducationId], [Name], [RoomId], [SoftDelete])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [Groups]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-29 22:20:49.224 +04:00  INF  Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-29 22:20:49.225 +04:00  INF  Executed action CourseApi.Controllers.Admin.GroupController.Create (CourseApi) in 120.0289ms
+2024-06-29 22:20:49.225 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.GroupController.Create (CourseApi)'
+2024-06-29 22:20:49.226 +04:00  INF  Request finished HTTP/1.1 POST http://localhost:5114/api/admin/Group/Create application/json 71 - 201 - application/json;+charset=utf-8 125.5303ms
+2024-06-29 22:20:55.497 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Group/GetAll - -
+2024-06-29 22:20:55.497 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi)'
+2024-06-29 22:20:55.497 +04:00  INF  Route matched with {action = "GetAll", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.GroupController (CourseApi).
+2024-06-29 22:20:55.500 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:20:55.500 +04:00  INF  Get All method is working
+2024-06-29 22:20:55.558 +04:00  INF  Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete], [g0].[Id], [g0].[GroupId], [g0].[StudentId]
+FROM [Groups] AS [g]
+LEFT JOIN [GroupStudents] AS [g0] ON [g].[Id] = [g0].[GroupId]
+ORDER BY [g].[Id]
+2024-06-29 22:20:55.572 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-29 22:20:55.573 +04:00  INF  Executed action CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi) in 76.0357ms
+2024-06-29 22:20:55.574 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi)'
+2024-06-29 22:20:55.574 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Group/GetAll - - - 200 - application/json;+charset=utf-8 77.3122ms
+2024-06-29 22:21:14.823 +04:00  INF  Request starting HTTP/1.1 POST http://localhost:5114/api/admin/Teacher/Create application/json 103
+2024-06-29 22:21:14.824 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.TeacherController.Create (CourseApi)'
+2024-06-29 22:21:14.830 +04:00  INF  Route matched with {action = "Create", controller = "Teacher"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Service.DTOs.Teachers.TeacherCreateDto) on controller CourseApi.Controllers.Admin.TeacherController (CourseApi).
+2024-06-29 22:21:14.832 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:21:14.902 +04:00  INF  Executed DbCommand (4ms) [Parameters=[@__item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Groups] AS [g]
+        WHERE [g].[Id] = @__item_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-06-29 22:21:14.916 +04:00  INF  Executed DbCommand (4ms) [Parameters=[@__item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+WHERE [g].[Id] = @__item_0
+2024-06-29 22:21:14.926 +04:00  INF  Executed DbCommand (1ms) [Parameters=[@__item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Groups] AS [g]
+        WHERE [g].[Id] = @__item_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-06-29 22:21:14.927 +04:00  INF  Executed DbCommand (0ms) [Parameters=[@__item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+WHERE [g].[Id] = @__item_0
+2024-06-29 22:21:15.046 +04:00  INF  Executed DbCommand (53ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Teachers] ([Age], [CreatedDate], [Name], [Salary], [SoftDelete], [Surname])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [Teachers]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-29 22:21:15.065 +04:00  INF  Executed DbCommand (8ms) [Parameters=[@p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [GroupTeachers] ([GroupId], [TeacherId])
+VALUES (@p6, @p7);
+SELECT [Id]
+FROM [GroupTeachers]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-29 22:21:15.069 +04:00  INF  Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-29 22:21:15.070 +04:00  INF  Executed action CourseApi.Controllers.Admin.TeacherController.Create (CourseApi) in 239.526ms
+2024-06-29 22:21:15.070 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.TeacherController.Create (CourseApi)'
+2024-06-29 22:21:15.070 +04:00  INF  Request finished HTTP/1.1 POST http://localhost:5114/api/admin/Teacher/Create application/json 103 - 201 - application/json;+charset=utf-8 247.1185ms
+2024-06-29 22:21:22.024 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Teacher/GetAll - -
+2024-06-29 22:21:22.028 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.TeacherController.GetAll (CourseApi)'
+2024-06-29 22:21:22.034 +04:00  INF  Route matched with {action = "GetAll", controller = "Teacher"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.TeacherController (CourseApi).
+2024-06-29 22:21:22.035 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:21:22.037 +04:00  INF  Get All method is working
+2024-06-29 22:21:22.186 +04:00  INF  Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Age], [t].[CreatedDate], [t].[Name], [t].[Salary], [t].[SoftDelete], [t].[Surname], [t0].[Id], [t0].[GroupId], [t0].[TeacherId], [t0].[Id0], [t0].[Capacity], [t0].[CreatedDate], [t0].[EducationId], [t0].[Name], [t0].[RoomId], [t0].[SoftDelete]
+FROM [Teachers] AS [t]
+LEFT JOIN (
+    SELECT [g].[Id], [g].[GroupId], [g].[TeacherId], [g0].[Id] AS [Id0], [g0].[Capacity], [g0].[CreatedDate], [g0].[EducationId], [g0].[Name], [g0].[RoomId], [g0].[SoftDelete]
+    FROM [GroupTeachers] AS [g]
+    INNER JOIN [Groups] AS [g0] ON [g].[GroupId] = [g0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[TeacherId]
+ORDER BY [t].[Id], [t0].[Id]
+2024-06-29 22:21:22.204 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Teachers.TeacherDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-29 22:21:22.208 +04:00  INF  Executed action CourseApi.Controllers.Admin.TeacherController.GetAll (CourseApi) in 174.0852ms
+2024-06-29 22:21:22.208 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.TeacherController.GetAll (CourseApi)'
+2024-06-29 22:21:22.209 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Teacher/GetAll - - - 200 - application/json;+charset=utf-8 184.3673ms
+2024-06-29 22:21:57.297 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Teacher/GetById/1 - -
+2024-06-29 22:21:57.297 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.TeacherController.GetById (CourseApi)'
+2024-06-29 22:21:57.303 +04:00  INF  Route matched with {action = "GetById", controller = "Teacher"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller CourseApi.Controllers.Admin.TeacherController (CourseApi).
+2024-06-29 22:21:57.306 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:21:57.403 +04:00  INF  Executed DbCommand (58ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], [t0].[Age], [t0].[CreatedDate], [t0].[Name], [t0].[Salary], [t0].[SoftDelete], [t0].[Surname], [g].[Id], [g].[GroupId], [g].[TeacherId]
+FROM (
+    SELECT TOP(1) [t].[Id], [t].[Age], [t].[CreatedDate], [t].[Name], [t].[Salary], [t].[SoftDelete], [t].[Surname]
+    FROM [Teachers] AS [t]
+    WHERE [t].[Id] = @__id_0
+) AS [t0]
+LEFT JOIN [GroupTeachers] AS [g] ON [t0].[Id] = [g].[TeacherId]
+ORDER BY [t0].[Id]
+2024-06-29 22:21:57.410 +04:00  INF  Executing OkObjectResult, writing value of type 'Service.DTOs.Teachers.TeacherDto'.
+2024-06-29 22:21:57.410 +04:00  INF  Executed action CourseApi.Controllers.Admin.TeacherController.GetById (CourseApi) in 107.1567ms
+2024-06-29 22:21:57.410 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.TeacherController.GetById (CourseApi)'
+2024-06-29 22:21:57.410 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Teacher/GetById/1 - - - 200 - application/json;+charset=utf-8 113.2465ms
+2024-06-29 22:23:09.790 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:23:09.814 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:23:09.814 +04:00  INF  Hosting environment: Development
+2024-06-29 22:23:09.814 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:23:09.997 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:23:10.171 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 179.0261ms
+2024-06-29 22:23:10.257 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:23:10.259 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:23:10.261 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.8726ms
+2024-06-29 22:23:10.298 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 41.8600ms
+2024-06-29 22:23:10.345 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:23:10.453 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:23:10.455 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.5395ms
+2024-06-29 22:23:10.464 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 119.1667ms
+2024-06-29 22:23:17.716 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Teacher/GetById/1 - -
+2024-06-29 22:23:17.728 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 22:23:17.736 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.TeacherController.GetById (CourseApi)'
+2024-06-29 22:23:17.812 +04:00  INF  Route matched with {action = "GetById", controller = "Teacher"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller CourseApi.Controllers.Admin.TeacherController (CourseApi).
+2024-06-29 22:23:20.002 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:23:21.714 +04:00  INF  Executed DbCommand (129ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], [t0].[Age], [t0].[CreatedDate], [t0].[Name], [t0].[Salary], [t0].[SoftDelete], [t0].[Surname], [t1].[Id], [t1].[GroupId], [t1].[TeacherId], [t1].[Id0], [t1].[Capacity], [t1].[CreatedDate], [t1].[EducationId], [t1].[Name], [t1].[RoomId], [t1].[SoftDelete]
+FROM (
+    SELECT TOP(1) [t].[Id], [t].[Age], [t].[CreatedDate], [t].[Name], [t].[Salary], [t].[SoftDelete], [t].[Surname]
+    FROM [Teachers] AS [t]
+    WHERE [t].[Id] = @__id_0
+) AS [t0]
+LEFT JOIN (
+    SELECT [g].[Id], [g].[GroupId], [g].[TeacherId], [g0].[Id] AS [Id0], [g0].[Capacity], [g0].[CreatedDate], [g0].[EducationId], [g0].[Name], [g0].[RoomId], [g0].[SoftDelete]
+    FROM [GroupTeachers] AS [g]
+    INNER JOIN [Groups] AS [g0] ON [g].[GroupId] = [g0].[Id]
+) AS [t1] ON [t0].[Id] = [t1].[TeacherId]
+ORDER BY [t0].[Id], [t1].[Id]
+2024-06-29 22:23:21.860 +04:00  INF  Executing OkObjectResult, writing value of type 'Service.DTOs.Teachers.TeacherDto'.
+2024-06-29 22:23:21.879 +04:00  INF  Executed action CourseApi.Controllers.Admin.TeacherController.GetById (CourseApi) in 4054.6471ms
+2024-06-29 22:23:21.880 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.TeacherController.GetById (CourseApi)'
+2024-06-29 22:23:21.890 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Teacher/GetById/1 - - - 200 - application/json;+charset=utf-8 4173.4874ms
+2024-06-29 22:23:46.748 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:23:46.773 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:23:46.774 +04:00  INF  Hosting environment: Development
+2024-06-29 22:23:46.774 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:23:47.184 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:23:47.348 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 167.2380ms
+2024-06-29 22:23:47.441 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:23:47.443 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:23:47.445 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.5740ms
+2024-06-29 22:23:47.454 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:23:47.455 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 0.9896ms
+2024-06-29 22:23:47.474 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 33.5862ms
+2024-06-29 22:23:47.521 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:23:47.624 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 102.7509ms
+2024-06-29 22:36:56.356 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:36:56.384 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:36:56.384 +04:00  INF  Hosting environment: Development
+2024-06-29 22:36:56.384 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:36:56.612 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:36:56.795 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 185.9301ms
+2024-06-29 22:36:56.815 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:36:56.818 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:36:56.819 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.6304ms
+2024-06-29 22:36:56.853 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 37.6837ms
+2024-06-29 22:36:56.903 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:36:57.001 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:36:57.002 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.6503ms
+2024-06-29 22:36:57.019 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 115.7705ms
+2024-06-29 22:38:22.466 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:38:22.507 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:38:22.507 +04:00  INF  Hosting environment: Development
+2024-06-29 22:38:22.507 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:38:23.012 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:38:23.175 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 165.8079ms
+2024-06-29 22:38:23.180 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:38:23.182 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.7302ms
+2024-06-29 22:38:23.182 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:38:23.213 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.0498ms
+2024-06-29 22:38:23.227 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:38:23.228 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.2298ms
+2024-06-29 22:38:23.253 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:38:23.355 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 102.0453ms
+2024-06-29 22:38:32.293 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=s - -
+2024-06-29 22:38:32.306 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 22:38:32.315 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:38:32.371 +04:00  INF  Route matched with {action = "SearchByName", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchByName(System.String) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 22:38:34.595 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:38:34.641 +04:00  INF  Search method is working
+2024-06-29 22:38:34.745 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi) in 2362.7984ms
+2024-06-29 22:38:34.748 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:38:34.753 +04:00  ERR  Missing type map configuration or unsupported mapping.
+
+Mapping types:
+EntityQueryable`1 -> RoomDto
+Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[Domain.Entities.Room, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Service.DTOs.Room.RoomDto
+2024-06-29 22:38:34.762 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=s - - - 500 - application/json 2468.4515ms
+2024-06-29 22:38:41.374 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=sun - -
+2024-06-29 22:38:41.379 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:38:41.379 +04:00  INF  Route matched with {action = "SearchByName", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchByName(System.String) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 22:38:41.488 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:38:41.489 +04:00  INF  Search method is working
+2024-06-29 22:38:41.490 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi) in 110.8611ms
+2024-06-29 22:38:41.490 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:38:41.491 +04:00  ERR  Missing type map configuration or unsupported mapping.
+
+Mapping types:
+EntityQueryable`1 -> RoomDto
+Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[Domain.Entities.Room, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Service.DTOs.Room.RoomDto
+2024-06-29 22:38:41.491 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=sun - - - 500 - application/json 117.1714ms
+2024-06-29 22:39:29.275 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:39:29.296 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:39:29.297 +04:00  INF  Hosting environment: Development
+2024-06-29 22:39:29.297 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:39:29.508 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:39:29.666 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 161.1180ms
+2024-06-29 22:39:29.715 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:39:29.717 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:39:29.719 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.3828ms
+2024-06-29 22:39:29.745 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.7216ms
+2024-06-29 22:39:29.922 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:39:29.923 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.0198ms
+2024-06-29 22:39:30.021 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:39:30.118 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 97.1659ms
+2024-06-29 22:39:45.443 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:39:45.478 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:39:45.478 +04:00  INF  Hosting environment: Development
+2024-06-29 22:39:45.478 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:39:45.678 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:39:45.839 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 162.2147ms
+2024-06-29 22:39:45.850 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:39:45.852 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:39:45.853 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.2951ms
+2024-06-29 22:39:45.886 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 35.0860ms
+2024-06-29 22:39:45.941 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:39:45.942 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.1741ms
+2024-06-29 22:39:46.008 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:39:46.101 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 93.8563ms
+2024-06-29 22:40:26.423 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:40:26.450 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:40:26.450 +04:00  INF  Hosting environment: Development
+2024-06-29 22:40:26.450 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:40:26.921 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:40:27.090 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 172.1339ms
+2024-06-29 22:40:27.097 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:40:27.097 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:40:27.099 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.4690ms
+2024-06-29 22:40:27.129 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.7421ms
+2024-06-29 22:40:27.141 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:40:27.143 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.8577ms
+2024-06-29 22:40:27.168 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:40:27.264 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 95.8876ms
+2024-06-29 22:40:34.347 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=sun - -
+2024-06-29 22:40:34.362 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 22:40:34.373 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:40:34.447 +04:00  INF  Route matched with {action = "SearchByName", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchByName(System.String) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 22:40:36.657 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:40:36.717 +04:00  INF  Search method is working
+2024-06-29 22:40:36.785 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi) in 2323.7041ms
+2024-06-29 22:40:36.787 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:40:36.792 +04:00  ERR  Missing type map configuration or unsupported mapping.
+
+Mapping types:
+EntityQueryable`1 -> RoomDto
+Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[Domain.Entities.Room, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Service.DTOs.Room.RoomDto
+2024-06-29 22:40:36.801 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=sun - - - 500 - application/json 2454.1878ms
+2024-06-29 22:41:24.779 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:41:24.810 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:41:24.810 +04:00  INF  Hosting environment: Development
+2024-06-29 22:41:24.810 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:41:25.531 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:41:26.456 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:41:26.474 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 11.9103ms
+2024-06-29 22:41:26.494 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 966.5400ms
+2024-06-29 22:41:26.595 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:41:26.652 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:41:26.654 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.6979ms
+2024-06-29 22:41:26.796 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 201.0540ms
+2024-06-29 22:41:26.850 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:41:27.075 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 224.8969ms
+2024-06-29 22:41:34.414 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=sun - -
+2024-06-29 22:41:37.336 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 22:41:37.348 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:41:37.408 +04:00  INF  Route matched with {action = "SearchByName", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchByName(System.String) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 22:41:40.759 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:41:43.301 +04:00  INF  Search method is working
+2024-06-29 22:41:43.910 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi) in 6482.1727ms
+2024-06-29 22:41:43.923 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:42:14.946 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:42:14.989 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:42:14.990 +04:00  INF  Hosting environment: Development
+2024-06-29 22:42:14.990 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:42:15.263 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:42:15.420 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 161.4415ms
+2024-06-29 22:42:15.443 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:42:15.444 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.4308ms
+2024-06-29 22:42:15.456 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:42:15.487 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.7141ms
+2024-06-29 22:42:15.556 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:42:15.557 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 0.9141ms
+2024-06-29 22:42:15.632 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:42:15.729 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 96.8493ms
+2024-06-29 22:42:22.119 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:42:22.171 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:42:22.172 +04:00  INF  Hosting environment: Development
+2024-06-29 22:42:22.172 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:42:22.619 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:42:22.916 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 301.8926ms
+2024-06-29 22:42:22.924 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:42:22.926 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:42:22.929 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 3.4532ms
+2024-06-29 22:42:22.979 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:42:22.981 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.3855ms
+2024-06-29 22:42:22.996 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 72.2658ms
+2024-06-29 22:42:23.041 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:42:23.160 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 119.4062ms
+2024-06-29 22:42:33.095 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=sun - -
+2024-06-29 22:42:35.157 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 22:42:35.164 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:42:35.195 +04:00  INF  Route matched with {action = "SearchByName", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchByName(System.String) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 22:42:36.255 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:42:37.660 +04:00  INF  Search method is working
+2024-06-29 22:42:47.603 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi) in 12402.3791ms
+2024-06-29 22:42:47.607 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:42:49.006 +04:00  ERR  Missing type map configuration or unsupported mapping.
+
+Mapping types:
+EntityQueryable`1 -> RoomDto
+Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[Domain.Entities.Room, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Service.DTOs.Room.RoomDto
+2024-06-29 22:42:49.936 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=sun - - - 500 - application/json 16841.2716ms
+2024-06-29 22:43:58.660 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:43:58.690 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:43:58.690 +04:00  INF  Hosting environment: Development
+2024-06-29 22:43:58.690 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:43:59.237 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:43:59.590 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 353.1630ms
+2024-06-29 22:43:59.596 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:43:59.598 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:43:59.602 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 3.8485ms
+2024-06-29 22:43:59.645 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:43:59.646 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 0.8406ms
+2024-06-29 22:43:59.663 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 67.1203ms
+2024-06-29 22:43:59.703 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:43:59.829 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 126.4427ms
+2024-06-29 22:45:02.050 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=sun - -
+2024-06-29 22:45:05.136 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 22:45:05.155 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:45:05.234 +04:00  INF  Route matched with {action = "SearchByName", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchByName(System.String) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 22:45:08.503 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:45:25.752 +04:00  INF  Search method is working
+2024-06-29 22:46:46.863 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:46:46.890 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:46:46.890 +04:00  INF  Hosting environment: Development
+2024-06-29 22:46:46.890 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:46:47.189 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:46:47.366 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 180.0130ms
+2024-06-29 22:46:47.386 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:46:47.388 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:46:47.391 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 2.2868ms
+2024-06-29 22:46:47.422 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 36.0281ms
+2024-06-29 22:46:47.471 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:46:47.585 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 114.1395ms
+2024-06-29 22:46:47.599 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:46:47.601 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 2.3780ms
+2024-06-29 22:47:00.769 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=sun - -
+2024-06-29 22:47:00.777 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 22:47:00.784 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:47:00.842 +04:00  INF  Route matched with {action = "SearchByName", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchByName(System.String) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 22:47:03.156 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:47:03.220 +04:00  INF  Search method is working
+2024-06-29 22:47:04.679 +04:00  INF  Executed DbCommand (160ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[CreatedDate], [r].[GroupId], [r].[Name], [r].[SeatCount], [r].[SoftDelete]
+FROM [Rooms] AS [r]
+WHERE [r].[Name] = @__name_0
+2024-06-29 22:47:04.933 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi) in 4078.4454ms
+2024-06-29 22:47:04.934 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:47:04.938 +04:00  ERR  Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> RoomDto
+System.Collections.Generic.List`1[[Domain.Entities.Room, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Service.DTOs.Room.RoomDto
+2024-06-29 22:47:04.946 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=sun - - - 500 - application/json 4177.0569ms
+2024-06-29 22:47:20.155 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:47:20.199 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:47:20.199 +04:00  INF  Hosting environment: Development
+2024-06-29 22:47:20.199 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:47:20.855 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:47:21.158 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 309.1251ms
+2024-06-29 22:47:21.166 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:47:21.166 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:47:21.169 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 3.3153ms
+2024-06-29 22:47:21.212 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:47:21.213 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.1084ms
+2024-06-29 22:47:21.233 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 66.6968ms
+2024-06-29 22:47:21.269 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:47:21.397 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 128.1024ms
+2024-06-29 22:47:28.250 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=sun - -
+2024-06-29 22:47:30.780 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 22:47:30.785 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:47:30.808 +04:00  INF  Route matched with {action = "SearchByName", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchByName(System.String) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 22:47:31.931 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:47:33.668 +04:00  INF  Search method is working
+2024-06-29 22:47:39.236 +04:00  INF  Executed DbCommand (93ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[CreatedDate], [r].[GroupId], [r].[Name], [r].[SeatCount], [r].[SoftDelete]
+FROM [Rooms] AS [r]
+WHERE [r].[Name] = @__name_0
+2024-06-29 22:49:55.054 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi) in 144240.9483ms
+2024-06-29 22:49:55.055 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:49:55.097 +04:00  ERR  Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> RoomDto
+System.Collections.Generic.List`1[[Domain.Entities.Room, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Service.DTOs.Room.RoomDto
+2024-06-29 22:49:55.106 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=sun - - - 500 - application/json 146855.8556ms
+2024-06-29 22:58:40.958 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:58:40.995 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:58:40.995 +04:00  INF  Hosting environment: Development
+2024-06-29 22:58:40.995 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:58:41.215 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:58:41.375 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 160.5935ms
+2024-06-29 22:58:41.383 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:58:41.384 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.2853ms
+2024-06-29 22:58:41.393 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:58:41.423 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.9337ms
+2024-06-29 22:58:41.616 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:58:41.708 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:58:41.710 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.2780ms
+2024-06-29 22:58:41.724 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 108.1644ms
+2024-06-29 22:58:49.460 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Room/GetAll - -
+2024-06-29 22:58:49.474 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 22:58:49.486 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.GetAll (CourseApi)'
+2024-06-29 22:58:49.527 +04:00  INF  Route matched with {action = "GetAll", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 22:58:51.870 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:58:51.874 +04:00  INF  Get All method is working
+2024-06-29 22:58:53.160 +04:00  INF  Executed DbCommand (80ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[CreatedDate], [r].[GroupId], [r].[Name], [r].[SeatCount], [r].[SoftDelete]
+FROM [Rooms] AS [r]
+2024-06-29 22:58:53.276 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Room.RoomDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-29 22:58:53.296 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.GetAll (CourseApi) in 3754.0727ms
+2024-06-29 22:58:53.298 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.GetAll (CourseApi)'
+2024-06-29 22:58:53.308 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Room/GetAll - - - 200 - application/json;+charset=utf-8 3847.5076ms
+2024-06-29 22:59:46.420 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 22:59:46.456 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 22:59:46.456 +04:00  INF  Hosting environment: Development
+2024-06-29 22:59:46.456 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 22:59:46.489 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:59:46.671 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 185.1904ms
+2024-06-29 22:59:46.677 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-29 22:59:46.679 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.8407ms
+2024-06-29 22:59:46.680 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-29 22:59:46.710 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.9339ms
+2024-06-29 22:59:46.778 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-29 22:59:46.780 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.9833ms
+2024-06-29 22:59:46.813 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-29 22:59:46.920 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 107.2350ms
+2024-06-29 22:59:55.414 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=s - -
+2024-06-29 22:59:55.431 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-29 22:59:55.442 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:59:55.504 +04:00  INF  Route matched with {action = "SearchByName", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchByName(System.String) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 22:59:57.808 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 22:59:57.870 +04:00  INF  Search method is working
+2024-06-29 22:59:59.511 +04:00  INF  Executed DbCommand (170ms) [Parameters=[@__Trim_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[CreatedDate], [r].[GroupId], [r].[Name], [r].[SeatCount], [r].[SoftDelete]
+FROM [Rooms] AS [r]
+WHERE (@__Trim_0 LIKE N'') OR (CHARINDEX(@__Trim_0, LTRIM(RTRIM([r].[Name]))) > 0)
+2024-06-29 22:59:59.738 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi) in 4223.4767ms
+2024-06-29 22:59:59.740 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 22:59:59.744 +04:00  ERR  Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> RoomDto
+System.Collections.Generic.List`1[[Domain.Entities.Room, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Service.DTOs.Room.RoomDto
+2024-06-29 22:59:59.754 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=s - - - 500 - application/json 4340.2679ms
+2024-06-29 23:00:06.938 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=sun - -
+2024-06-29 23:00:06.942 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 23:00:06.943 +04:00  INF  Route matched with {action = "SearchByName", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchByName(System.String) on controller CourseApi.Controllers.Admin.RoomController (CourseApi).
+2024-06-29 23:00:07.049 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 23:00:07.050 +04:00  INF  Search method is working
+2024-06-29 23:00:07.075 +04:00  INF  Executed DbCommand (17ms) [Parameters=[@__Trim_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[CreatedDate], [r].[GroupId], [r].[Name], [r].[SeatCount], [r].[SoftDelete]
+FROM [Rooms] AS [r]
+WHERE (@__Trim_0 LIKE N'') OR (CHARINDEX(@__Trim_0, LTRIM(RTRIM([r].[Name]))) > 0)
+2024-06-29 23:00:07.076 +04:00  INF  Executed action CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi) in 133.6ms
+2024-06-29 23:00:07.077 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.RoomController.SearchByName (CourseApi)'
+2024-06-29 23:00:07.077 +04:00  ERR  Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> RoomDto
+System.Collections.Generic.List`1[[Domain.Entities.Room, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Service.DTOs.Room.RoomDto
+2024-06-29 23:00:07.078 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Room/SearchByName?name=sun - - - 500 - application/json 140.3442ms

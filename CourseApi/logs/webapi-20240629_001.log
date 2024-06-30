@@ -1,0 +1,5 @@
+2024-06-29 17:55:05.545 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 17:55:24.621 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 17:55:24.652 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 17:55:24.653 +04:00  INF  Hosting environment: Development
+2024-06-29 17:55:24.653 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\

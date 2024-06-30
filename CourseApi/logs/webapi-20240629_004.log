@@ -1,0 +1,104 @@
+2024-06-29 17:55:50.739 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 17:55:50.770 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 17:55:50.770 +04:00  INF  Hosting environment: Development
+2024-06-29 17:55:50.770 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 17:58:25.019 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 17:58:26.462 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-29 17:58:26.485 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-29 17:58:26.485 +04:00  INF  Hosting environment: Development
+2024-06-29 17:58:26.485 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\CourseAPI\CourseApi\CourseApi\
+2024-06-29 17:58:33.101 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-29 17:58:33.498 +04:00  INF  Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-06-29 17:58:33.525 +04:00  INF  Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-06-29 17:58:33.530 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-06-29 17:58:33.531 +04:00  INF  Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-06-29 17:58:33.559 +04:00  INF  Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-06-29 17:58:33.573 +04:00  INF  Applying migration '20240629135825_CreatedTables'.
+2024-06-29 17:58:33.642 +04:00  INF  Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Education] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [GroupId] int NOT NULL,
+    [SoftDelete] bit NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Education] PRIMARY KEY ([Id])
+);
+2024-06-29 17:58:33.645 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Room] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [SeatCount] int NOT NULL,
+    [GroupId] int NOT NULL,
+    [SoftDelete] bit NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Room] PRIMARY KEY ([Id])
+);
+2024-06-29 17:58:33.647 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Students] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [SurName] nvarchar(max) NOT NULL,
+    [Address] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Age] int NOT NULL,
+    [SoftDelete] bit NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Students] PRIMARY KEY ([Id])
+);
+2024-06-29 17:58:33.649 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Teacher] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Surname] nvarchar(max) NOT NULL,
+    [Salary] int NOT NULL,
+    [Age] int NOT NULL,
+    [GroupId] int NOT NULL,
+    [SoftDelete] bit NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Teacher] PRIMARY KEY ([Id])
+);
+2024-06-29 17:58:33.655 +04:00  INF  Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Groups] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Capacity] int NOT NULL,
+    [StudentCount] int NOT NULL,
+    [EducationId] int NOT NULL,
+    [RoomId] int NOT NULL,
+    [TeacherId] int NOT NULL,
+    [SoftDelete] bit NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Groups] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Groups_Education_EducationId] FOREIGN KEY ([EducationId]) REFERENCES [Education] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Groups_Room_RoomId] FOREIGN KEY ([RoomId]) REFERENCES [Room] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Groups_Teacher_TeacherId] FOREIGN KEY ([TeacherId]) REFERENCES [Teacher] ([Id]) ON DELETE CASCADE
+);
+2024-06-29 17:58:33.659 +04:00  INF  Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [GroupStudents] (
+    [Id] int NOT NULL IDENTITY,
+    [StudentId] int NOT NULL,
+    [GroupId] int NOT NULL,
+    CONSTRAINT [PK_GroupStudents] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_GroupStudents_Groups_GroupId] FOREIGN KEY ([GroupId]) REFERENCES [Groups] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_GroupStudents_Students_StudentId] FOREIGN KEY ([StudentId]) REFERENCES [Students] ([Id]) ON DELETE CASCADE
+);
+2024-06-29 17:58:33.660 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Groups_EducationId] ON [Groups] ([EducationId]);
+2024-06-29 17:58:33.661 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Groups_RoomId] ON [Groups] ([RoomId]);
+2024-06-29 17:58:33.662 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Groups_TeacherId] ON [Groups] ([TeacherId]);
+2024-06-29 17:58:33.663 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_GroupStudents_GroupId] ON [GroupStudents] ([GroupId]);
+2024-06-29 17:58:33.664 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_GroupStudents_StudentId] ON [GroupStudents] ([StudentId]);
+2024-06-29 17:58:33.666 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240629135825_CreatedTables', N'6.0.31');
