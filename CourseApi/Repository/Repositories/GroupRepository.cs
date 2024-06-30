@@ -19,7 +19,7 @@ namespace Repository.Repositories
 
         public async Task<IEnumerable<Group>> GetAllWithAsync()
         {
-            var data= await _context.Groups.AsNoTracking().Include(m => m.GroupStudents).ToListAsync();
+            var data= await _context.Groups.AsNoTracking().Include(m => m.GroupStudents).Include(m=>m.Education).Include(m=>m.Room).ToListAsync();
            return data; 
         }
 

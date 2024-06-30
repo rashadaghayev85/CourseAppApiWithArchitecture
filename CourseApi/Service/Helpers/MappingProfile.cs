@@ -30,7 +30,8 @@ namespace Service.Helpers
         src.GroupId.Select(id => new GroupStudent { GroupId = id })));
 
 
-            CreateMap<Group, GroupDto>().ReverseMap();
+            CreateMap<Group, GroupDto>().ForMember(dest => dest.EducationName, opt => opt.MapFrom(src => src.Education.Name))
+                .ForMember(dest => dest.RoomName, opt => opt.MapFrom(src => src.Room.Name));
             CreateMap<GroupCreateDto, Group>();
             CreateMap<GroupEditDto, Group>();
 

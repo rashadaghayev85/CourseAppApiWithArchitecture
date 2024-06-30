@@ -1846,3 +1846,115 @@ ORDER BY [t].[Id], [t0].[Id]
 2024-06-30 19:53:29.272 +04:00  INF  Executed action CourseApi.Controllers.Admin.TeacherController.GetAll (CourseApi) in 96.5558ms
 2024-06-30 19:53:29.272 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.TeacherController.GetAll (CourseApi)'
 2024-06-30 19:53:29.272 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Teacher/GetAll - - - 200 - application/json;+charset=utf-8 102.9602ms
+2024-06-30 20:14:13.151 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-30 20:14:13.190 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-30 20:14:13.191 +04:00  INF  Hosting environment: Development
+2024-06-30 20:14:13.191 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\PB101\code\Githuba qoyulanlar\ASP.CORE-API\CourseAppApiWithArchitecture\CourseApi\CourseApi\
+2024-06-30 20:14:13.677 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-30 20:14:13.855 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 181.6414ms
+2024-06-30 20:14:13.906 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-30 20:14:13.906 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-30 20:14:13.908 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.6889ms
+2024-06-30 20:14:13.941 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 35.6446ms
+2024-06-30 20:14:13.997 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-30 20:14:14.089 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-30 20:14:14.091 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.5526ms
+2024-06-30 20:14:14.104 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 106.6773ms
+2024-06-30 20:14:18.846 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Group/GetAll - -
+2024-06-30 20:14:18.852 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-30 20:14:18.857 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi)'
+2024-06-30 20:14:18.871 +04:00  INF  Route matched with {action = "GetAll", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.GroupController (CourseApi).
+2024-06-30 20:14:18.889 +04:00  INF  Executed action CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi) in 14.7296ms
+2024-06-30 20:14:18.890 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi)'
+2024-06-30 20:14:18.891 +04:00  ERR  Exception has been thrown by the target of an invocation.
+2024-06-30 20:14:18.892 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Group/GetAll - - - 400 - application/json 46.0928ms
+2024-06-30 20:15:03.167 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-30 20:15:03.199 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-30 20:15:03.199 +04:00  INF  Hosting environment: Development
+2024-06-30 20:15:03.199 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\PB101\code\Githuba qoyulanlar\ASP.CORE-API\CourseAppApiWithArchitecture\CourseApi\CourseApi\
+2024-06-30 20:15:03.567 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-30 20:15:03.727 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 161.6022ms
+2024-06-30 20:15:03.756 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-30 20:15:03.758 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-30 20:15:03.759 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 0.9038ms
+2024-06-30 20:15:03.763 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-30 20:15:03.764 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 0.7283ms
+2024-06-30 20:15:03.781 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 24.6656ms
+2024-06-30 20:15:03.810 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-30 20:15:03.901 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 90.7695ms
+2024-06-30 20:15:13.774 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Group/GetAll - -
+2024-06-30 20:15:13.795 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-30 20:15:13.803 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi)'
+2024-06-30 20:15:13.842 +04:00  INF  Route matched with {action = "GetAll", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.GroupController (CourseApi).
+2024-06-30 20:15:15.976 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-30 20:15:15.980 +04:00  INF  Get All method is working
+2024-06-30 20:15:17.548 +04:00  INF  Executed DbCommand (96ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete], [g].[StudentCount], [g0].[Id], [g0].[GroupId], [g0].[StudentId]
+FROM [Groups] AS [g]
+LEFT JOIN [GroupStudents] AS [g0] ON [g].[Id] = [g0].[GroupId]
+ORDER BY [g].[Id]
+2024-06-30 20:15:17.686 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-30 20:15:17.703 +04:00  INF  Executed action CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi) in 3850.2534ms
+2024-06-30 20:15:17.704 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi)'
+2024-06-30 20:15:17.711 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Group/GetAll - - - 200 - application/json;+charset=utf-8 3937.2733ms
+2024-06-30 20:16:14.901 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-30 20:16:14.924 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-30 20:16:14.925 +04:00  INF  Hosting environment: Development
+2024-06-30 20:16:14.925 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\PB101\code\Githuba qoyulanlar\ASP.CORE-API\CourseAppApiWithArchitecture\CourseApi\CourseApi\
+2024-06-30 20:16:15.173 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-30 20:16:15.331 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 161.0552ms
+2024-06-30 20:16:15.339 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-30 20:16:15.341 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-30 20:16:15.341 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 2.0760ms
+2024-06-30 20:16:15.368 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 26.8663ms
+2024-06-30 20:16:15.376 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-30 20:16:15.377 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 0.9879ms
+2024-06-30 20:16:15.402 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-30 20:16:15.486 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 84.2402ms
+2024-06-30 20:16:26.143 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Group/GetAll - -
+2024-06-30 20:16:26.154 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-30 20:16:26.163 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi)'
+2024-06-30 20:16:26.204 +04:00  INF  Route matched with {action = "GetAll", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.GroupController (CourseApi).
+2024-06-30 20:16:28.399 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-30 20:16:28.405 +04:00  INF  Get All method is working
+2024-06-30 20:16:30.123 +04:00  INF  Executed DbCommand (110ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete], [g].[StudentCount], [e].[Id], [g0].[Id], [g0].[GroupId], [g0].[StudentId], [e].[CreatedDate], [e].[Name], [e].[SoftDelete]
+FROM [Groups] AS [g]
+INNER JOIN [Educations] AS [e] ON [g].[EducationId] = [e].[Id]
+LEFT JOIN [GroupStudents] AS [g0] ON [g].[Id] = [g0].[GroupId]
+ORDER BY [g].[Id], [e].[Id]
+2024-06-30 20:16:30.261 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-30 20:16:30.279 +04:00  INF  Executed action CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi) in 4061.5007ms
+2024-06-30 20:16:30.281 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi)'
+2024-06-30 20:16:30.291 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Group/GetAll - - - 200 - application/json;+charset=utf-8 4148.1091ms
+2024-06-30 20:18:56.049 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-30 20:18:56.079 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-30 20:18:56.079 +04:00  INF  Hosting environment: Development
+2024-06-30 20:18:56.079 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\PB101\code\Githuba qoyulanlar\ASP.CORE-API\CourseAppApiWithArchitecture\CourseApi\CourseApi\
+2024-06-30 20:18:56.224 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-30 20:18:56.373 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 151.5732ms
+2024-06-30 20:18:56.443 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-30 20:18:56.445 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-30 20:18:56.446 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.0840ms
+2024-06-30 20:18:56.451 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-30 20:18:56.452 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 0.9966ms
+2024-06-30 20:18:56.475 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.8962ms
+2024-06-30 20:18:56.516 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-30 20:18:56.603 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 87.0483ms
+2024-06-30 20:19:16.270 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/api/admin/Group/GetAll - -
+2024-06-30 20:19:16.286 +04:00  WRN  Failed to determine the https port for redirect.
+2024-06-30 20:19:16.297 +04:00  INF  Executing endpoint 'CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi)'
+2024-06-30 20:19:16.337 +04:00  INF  Route matched with {action = "GetAll", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseApi.Controllers.Admin.GroupController (CourseApi).
+2024-06-30 20:19:18.568 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-30 20:19:18.575 +04:00  INF  Get All method is working
+2024-06-30 20:19:20.199 +04:00  INF  Executed DbCommand (102ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete], [g].[StudentCount], [e].[Id], [r].[Id], [g0].[Id], [g0].[GroupId], [g0].[StudentId], [e].[CreatedDate], [e].[Name], [e].[SoftDelete], [r].[CreatedDate], [r].[Name], [r].[SeatCount], [r].[SoftDelete]
+FROM [Groups] AS [g]
+INNER JOIN [Educations] AS [e] ON [g].[EducationId] = [e].[Id]
+INNER JOIN [Rooms] AS [r] ON [g].[RoomId] = [r].[Id]
+LEFT JOIN [GroupStudents] AS [g0] ON [g].[Id] = [g0].[GroupId]
+ORDER BY [g].[Id], [e].[Id], [r].[Id]
+2024-06-30 20:19:20.342 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-30 20:19:20.364 +04:00  INF  Executed action CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi) in 4012.2775ms
+2024-06-30 20:19:20.365 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi)'
+2024-06-30 20:19:20.376 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Group/GetAll - - - 200 - application/json;+charset=utf-8 4105.4323ms

@@ -3,31 +3,43 @@
   "WorkspaceRootPath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A021B253-54A0-404E-AAD6-773135582899}|Repository\\Repository.csproj|c:\\users\\rashad\\onedrive\\desktop\\pb101\\code\\githuba qoyulanlar\\asp.core-api\\courseappapiwitharchitecture\\courseapi\\repository\\repositories\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A021B253-54A0-404E-AAD6-773135582899}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCDE5068-F2D6-441D-939F-9B978FD56A8C}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\pb101\\code\\githuba qoyulanlar\\asp.core-api\\courseappapiwitharchitecture\\courseapi\\service\\services\\groupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCDE5068-F2D6-441D-939F-9B978FD56A8C}|Service\\Service.csproj|solutionrelative:service\\services\\groupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCDE5068-F2D6-441D-939F-9B978FD56A8C}|Service\\Service.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\service\\helpers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCDE5068-F2D6-441D-939F-9B978FD56A8C}|Service\\Service.csproj|solutionrelative:service\\helpers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCDE5068-F2D6-441D-939F-9B978FD56A8C}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\pb101\\code\\githuba qoyulanlar\\asp.core-api\\courseappapiwitharchitecture\\courseapi\\service\\dtos\\groups\\groupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCDE5068-F2D6-441D-939F-9B978FD56A8C}|Service\\Service.csproj|solutionrelative:service\\dtos\\groups\\groupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DCDE5068-F2D6-441D-939F-9B978FD56A8C}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\pb101\\code\\githuba qoyulanlar\\asp.core-api\\courseappapiwitharchitecture\\courseapi\\service\\services\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCDE5068-F2D6-441D-939F-9B978FD56A8C}|Service\\Service.csproj|solutionrelative:service\\services\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCDE5068-F2D6-441D-939F-9B978FD56A8C}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\pb101\\code\\githuba qoyulanlar\\asp.core-api\\courseappapiwitharchitecture\\courseapi\\service\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DCDE5068-F2D6-441D-939F-9B978FD56A8C}|Service\\Service.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\service\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCDE5068-F2D6-441D-939F-9B978FD56A8C}|Service\\Service.csproj|solutionrelative:service\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCDE5068-F2D6-441D-939F-9B978FD56A8C}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\pb101\\code\\githuba qoyulanlar\\asp.core-api\\courseappapiwitharchitecture\\courseapi\\service\\helpers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCDE5068-F2D6-441D-939F-9B978FD56A8C}|Service\\Service.csproj|solutionrelative:service\\helpers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A021B253-54A0-404E-AAD6-773135582899}|Repository\\Repository.csproj|c:\\users\\rashad\\onedrive\\desktop\\pb101\\code\\githuba qoyulanlar\\asp.core-api\\courseappapiwitharchitecture\\courseapi\\repository\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A021B253-54A0-404E-AAD6-773135582899}|Repository\\Repository.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\repository\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A021B253-54A0-404E-AAD6-773135582899}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A021B253-54A0-404E-AAD6-773135582899}|Repository\\Repository.csproj|c:\\users\\rashad\\onedrive\\desktop\\pb101\\code\\githuba qoyulanlar\\asp.core-api\\courseappapiwitharchitecture\\courseapi\\repository\\repositories\\interfaces\\istudentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A021B253-54A0-404E-AAD6-773135582899}|Repository\\Repository.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\repository\\repositories\\interfaces\\istudentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A021B253-54A0-404E-AAD6-773135582899}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\istudentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F5F2C19-CC24-4B44-A809-EB008C59EEF2}|CourseApi\\CourseApi.csproj|c:\\users\\rashad\\onedrive\\desktop\\pb101\\code\\githuba qoyulanlar\\asp.core-api\\courseappapiwitharchitecture\\courseapi\\courseapi\\controllers\\admin\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F5F2C19-CC24-4B44-A809-EB008C59EEF2}|CourseApi\\CourseApi.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\courseapi\\controllers\\admin\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F5F2C19-CC24-4B44-A809-EB008C59EEF2}|CourseApi\\CourseApi.csproj|solutionrelative:courseapi\\controllers\\admin\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F5F2C19-CC24-4B44-A809-EB008C59EEF2}|CourseApi\\CourseApi.csproj|c:\\users\\rashad\\onedrive\\desktop\\pb101\\code\\githuba qoyulanlar\\asp.core-api\\courseappapiwitharchitecture\\courseapi\\courseapi\\middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F5F2C19-CC24-4B44-A809-EB008C59EEF2}|CourseApi\\CourseApi.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\courseapi\\middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F5F2C19-CC24-4B44-A809-EB008C59EEF2}|CourseApi\\CourseApi.csproj|solutionrelative:courseapi\\middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -47,37 +59,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GroupService.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Service\\Services\\GroupService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\GroupService.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Service\\Services\\GroupService.cs",
+              "RelativeToolTip": "Service\\Services\\GroupService.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAAAEwAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T16:18:30.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GroupRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Repository\\Repositories\\GroupRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\GroupRepository.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Repository\\Repositories\\GroupRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\GroupRepository.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAvwBUAAACCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T16:15:53.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GroupDto.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Service\\DTOs\\Groups\\GroupDto.cs",
+              "RelativeDocumentMoniker": "Service\\DTOs\\Groups\\GroupDto.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Service\\DTOs\\Groups\\GroupDto.cs",
+              "RelativeToolTip": "Service\\DTOs\\Groups\\GroupDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T16:10:34.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "TeacherService.cs",
               "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Service\\Services\\TeacherService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\TeacherService.cs",
               "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Service\\Services\\TeacherService.cs",
               "RelativeToolTip": "Service\\Services\\TeacherService.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAAAGUAAABQAAAA",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAuwGUAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-30T15:48:19.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IStudentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Repository\\Repositories\\Interfaces\\IStudentRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IStudentRepository.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Repository\\Repositories\\Interfaces\\IStudentRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IStudentRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T15:43:39.623Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "StudentService.cs",
               "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Service\\Services\\StudentService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\StudentService.cs",
@@ -85,22 +123,20 @@
               "RelativeToolTip": "Service\\Services\\StudentService.cs",
               "ViewState": "AQIAAEkAAAAAAAAAAAAAAFUAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T15:24:32.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T15:24:32.12Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "dbo.Students [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/RASHAD8088_SQLEXPRESS/APICourseDB/True/SqlTable/dbo.Students.sql",
               "ToolTip": "dbo.Students [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-06-30T15:21:47.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T15:21:47.862Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "StudentRepository.cs",
               "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Repository\\Repositories\\StudentRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\StudentRepository.cs",
@@ -108,8 +144,7 @@
               "RelativeToolTip": "Repository\\Repositories\\StudentRepository.cs",
               "ViewState": "AQIAACYAAAAAAAAAAADgvzcAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T15:19:51.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T15:19:51.391Z"
             },
             {
               "$type": "Document",
@@ -119,34 +154,44 @@
               "RelativeDocumentMoniker": "Service\\Helpers\\MappingProfile.cs",
               "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Service\\Helpers\\MappingProfile.cs",
               "RelativeToolTip": "Service\\Helpers\\MappingProfile.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAADIAAAAxAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAACEAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-30T13:47:30.179Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
+              "Title": "IStudentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Repository\\Repositories\\Interfaces\\IStudentRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IStudentRepository.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Repository\\Repositories\\Interfaces\\IStudentRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IStudentRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T15:43:39.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "dbo.GroupStudents [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/RASHAD8088_SQLEXPRESS/APICourseDB/True/SqlTable/dbo.GroupStudents.sql",
               "ToolTip": "dbo.GroupStudents [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-06-30T15:22:03.185Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T15:22:03.185Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "dbo.Groups [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/RASHAD8088_SQLEXPRESS/APICourseDB/True/SqlTable/dbo.Groups.sql",
               "ToolTip": "dbo.Groups [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-06-30T15:22:09.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T15:22:09.171Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "ExceptionHandlingMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\CourseApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "CourseApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
@@ -154,12 +199,11 @@
               "RelativeToolTip": "CourseApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAhwBYAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T15:24:44.499Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T15:24:44.499Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "StudentController.cs",
               "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\CourseApi\\Controllers\\Admin\\StudentController.cs",
               "RelativeDocumentMoniker": "CourseApi\\Controllers\\Admin\\StudentController.cs",
@@ -167,8 +211,7 @@
               "RelativeToolTip": "CourseApi\\Controllers\\Admin\\StudentController.cs",
               "ViewState": "AQIAAEUAAAAAAAAAAAAhwFcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T15:24:44.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T15:24:44.485Z"
             }
           ]
         }
