@@ -2214,3 +2214,31 @@ ORDER BY [g].[Id]
 2024-06-30 04:00:16.394 +04:00  INF  Executed action CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi) in 5.6995ms
 2024-06-30 04:00:16.394 +04:00  INF  Executed endpoint 'CourseApi.Controllers.Admin.GroupController.GetAll (CourseApi)'
 2024-06-30 04:00:16.394 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/api/admin/Group/GetAll - - - 200 - application/json;+charset=utf-8 6.5825ms
+2024-06-30 13:33:10.447 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-30 13:33:10.472 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-30 13:33:10.473 +04:00  INF  Hosting environment: Development
+2024-06-30 13:33:10.473 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\PB101\code\Githuba qoyulanlar\ASP.CORE-API\CourseAppApiWithArchitecture\CourseApi\CourseApi\
+2024-06-30 13:33:10.796 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-30 13:33:11.091 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 296.3012ms
+2024-06-30 13:33:11.105 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-30 13:33:11.136 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-30 13:33:11.138 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.0376ms
+2024-06-30 13:33:11.162 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 56.6350ms
+2024-06-30 13:33:11.168 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-30 13:33:11.169 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1.1077ms
+2024-06-30 13:33:11.241 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-30 13:33:11.332 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 91.1982ms
+2024-06-30 13:35:18.751 +04:00  INF  Now listening on: http://localhost:5114
+2024-06-30 13:35:18.772 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-30 13:35:18.773 +04:00  INF  Hosting environment: Development
+2024-06-30 13:35:18.773 +04:00  INF  Content root path: C:\Users\Rashad\OneDrive\Desktop\PB101\code\Githuba qoyulanlar\ASP.CORE-API\CourseAppApiWithArchitecture\CourseApi\CourseApi\
+2024-06-30 13:35:19.197 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-30 13:35:19.354 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 160.1674ms
+2024-06-30 13:35:19.361 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2024-06-30 13:35:19.363 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 1.8537ms
+2024-06-30 13:35:19.363 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2024-06-30 13:35:19.389 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.8367ms
+2024-06-30 13:35:19.438 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2024-06-30 13:35:19.439 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 0.8052ms
+2024-06-30 13:35:19.512 +04:00  INF  Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2024-06-30 13:35:19.596 +04:00  INF  Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 84.1560ms

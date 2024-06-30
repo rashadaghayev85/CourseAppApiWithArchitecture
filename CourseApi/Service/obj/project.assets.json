@@ -2950,11 +2950,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rashad\\OneDrive\\Desktop\\CourseAppApiWithArchitecture\\CourseApi\\Service\\Service.csproj",
+      "projectUniqueName": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Service\\Service.csproj",
       "projectName": "Service",
-      "projectPath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\CourseAppApiWithArchitecture\\CourseApi\\Service\\Service.csproj",
+      "projectPath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Service\\Service.csproj",
       "packagesPath": "C:\\Users\\Rashad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\CourseAppApiWithArchitecture\\CourseApi\\Service\\obj\\",
+      "outputPath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rashad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2971,8 +2971,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Rashad\\OneDrive\\Desktop\\CourseAppApiWithArchitecture\\CourseApi\\Repository\\Repository.csproj": {
-              "projectPath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\CourseAppApiWithArchitecture\\CourseApi\\Repository\\Repository.csproj"
+            "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Repository\\Repository.csproj": {
+              "projectPath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Repository\\Repository.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UAYKKJZ9My+B8XPmlyE3PoMoPTdr7zQFQLSOC3zdHBQoET9OqripWPCFTPYx/wK9ByeMIOtywiD0G1KY5/Rq2g==",
+  "dgSpecHash": "kRgZue6eV8BSQeUzy37IV2t29iZDTKSExVKkq2g1pQ/i3CwwBv6/OJPfrEjaI/WojXKiS+FTId+YyuNkpW1Mdw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\CourseAppApiWithArchitecture\\CourseApi\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Githuba qoyulanlar\\ASP.CORE-API\\CourseAppApiWithArchitecture\\CourseApi\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rashad\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Rashad\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
